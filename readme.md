@@ -22,15 +22,21 @@
 
 ### :heavy_check_mark:Our System Overview
 **LAMP Stack**
-- Linux (The Operating System)
-- <s>Apache (The Web Server)</s> We hosted the data locally so we did not use Apache! 
-- MySQL (The Database)
-- Python (The Programming Language)
+- Linux (The Operating System): Serves as the first layer for this stack model. Linux is free and open-source operating system, which provide flexibilities and configuration options to run our server.
+- <s>Apache (The Web Server)</s>: Since we are planning to host the database locally, we do not use the Apache to deliver the website on the internet.
+- MySQL (The Database): MySQL is known as open-source relational database management system for storing information. This will be the second layer for our model, that will store the data, and deliver the information as requested.
+- Python (The Programming Language): We use Python as our primary scripting language to create dynamic database server. 
 
 ### :heavy_check_mark:Our Database System
 - Person_id (int) : auto_increment 
 - Mask (boolean type)
 - Date_time (datetime type)
+
+After 128 frames captured the person coming toward the camera within distance, every person in the video will be labeled 
+as “Mask” or “No Mask”, which will be recorded in the metadata file. This data file is imported to MySQL database with
+“PersonID” will be the primary key to distinguish with the preexisting data. “PersonID” is “AUTO_INCREMENT”, which 
+allows us to generate unique number automatically when a new data record is added into the table, following by “Mask”, will be 
+stored in Boolean type: Mask: 1 and No-mask: 0. To store date and time information, we use SQL datetime type in order to define specific time a person has experience mask detection system.
 
 ### :heavy_check_mark:Our GUI Application
 - Used Python GUI framework Tkinter which is fast and easy to make funtional GUI within 2 months
